@@ -14,7 +14,7 @@ const AppointmentView = props => {
               <div className="content">
                 Email :{appointment.email}
                 <br />
-                Message :{appointment.Message}
+                Message :{appointment.message}
                 <br />
               </div>
             </div>
@@ -26,6 +26,6 @@ const AppointmentView = props => {
 };
 
 export default connect(
-  state => ({ initialData: state }),
+  state => ({ initialData: state.rootReducer2.vReducer }),
   _dispatch => ({})
 )(AppointmentView);

@@ -10,7 +10,7 @@ class AppointmentForm extends React.Component {
     this.state = {
       name: "",
       email: "",
-      comment: "",
+      message: "",
     };
   }
 
@@ -23,7 +23,7 @@ class AppointmentForm extends React.Component {
     const addAppointment = {
       name: this.state.name,
       email: this.state.email,
-      comment: this.state.comment
+      message: this.state.message
     };
     this.props.addAppointments(addAppointment);
   };
@@ -68,13 +68,13 @@ class AppointmentForm extends React.Component {
 
             {/* comment */}
             <div className="field">
-              <label className="label">Comment</label>
+              <label className="label">Message</label>
               <div className="control">
                 <textarea
                   className="textarea"
                   placeholder="Textarea"
-                  name="comment"
-                  value={this.state.comment}
+                  name="message"
+                  value={this.state.message}
                   onChange={this.handleChangeAll}
                 />
               </div>

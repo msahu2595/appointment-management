@@ -1,6 +1,7 @@
 import { createStore } from "redux";
-import myRootAppointmentReducer from "./reducers/rootAppointmentReducer";
+import rootReducer from "./reducers/rootReducer";
 
-const store = createStore(myRootAppointmentReducer);
+const store = createStore(rootReducer);
 
 export default store;
+
