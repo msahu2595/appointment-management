@@ -1,8 +1,13 @@
-const ADD_APPOINTMENT_R="ADD_APPOINTMENT"
 
-const ADD_APPOINTMENT = addAppointment => {
-  console.log(addAppointment)
-  return { type: ADD_APPOINTMENT_R, addAppointment };
-};
+export const addAppointmentsAsync = (addAppointment) => {
+  return { type: "ADD_APPOINTMENT", addAppointment };
+}
 
-export default ADD_APPOINTMENT;
+
+export const addAppointments = (addAppointment) => {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(addAppointmentsAsync(addAppointment));
+    }, 5000)
+  }
+}

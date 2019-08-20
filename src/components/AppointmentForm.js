@@ -2,7 +2,7 @@ import React from "react";
 
 import { connect } from "react-redux";
 
-import ADD_APPOINTMENT from "../Redux/actions/addAppointment";
+import * as actionCreators from "../Redux/actions/addAppointment";
 
 class AppointmentForm extends React.Component {
   constructor(props) {
@@ -98,6 +98,6 @@ class AppointmentForm extends React.Component {
 export default connect(
   _state => ({}),
   dispatch => ({
-    addAppointments: addAppointment => dispatch(ADD_APPOINTMENT(addAppointment))
+    addAppointments: addAppointment => dispatch(actionCreators.addAppointments(addAppointment))
   })
 )(AppointmentForm);
