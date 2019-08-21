@@ -25,7 +25,9 @@ export default () => {
     applyMiddleware(...middlewares)
   );
   let persistor = persistStore(store, {}, () => {
-    console.log("Successful...")
+    console.log("Successful...");
+    const state = store.getState();
+    console.log(state);
   });
   return { store, persistor };
 };
