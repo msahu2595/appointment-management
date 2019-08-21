@@ -10,7 +10,7 @@ class AppointmentForm extends React.Component {
     this.state = {
       name: "",
       email: "",
-      message: "",
+      message: ""
     };
   }
 
@@ -98,6 +98,7 @@ class AppointmentForm extends React.Component {
 export default connect(
   _state => ({}),
   dispatch => ({
-    addAppointments: addAppointment => dispatch(actionCreators.addAppointments(addAppointment))
+    addAppointments: addAppointment =>
+      dispatch(actionCreators.addAppointments(addAppointment))
   })
 )(AppointmentForm);
