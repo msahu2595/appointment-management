@@ -24,6 +24,8 @@ export default () => {
     persistReducer(persistConfig, rootReducer),
     applyMiddleware(...middlewares)
   );
-  let persistor = persistStore(store, {}, () => {});
+  let persistor = persistStore(store, {}, () => {
+    console.log("Successful...")
+  });
   return { store, persistor };
 };
